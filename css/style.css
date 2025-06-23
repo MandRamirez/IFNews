@@ -6,16 +6,14 @@ body {
     margin: 0;
     padding: 0;
     background: #f0f0f0;
-    padding-top: 120px;
-    /* Compensa o header fixo */
+    padding-top: 120px; /* Compensa o header fixo */
 }
 
 /* =========================
    HEADER / MENU SUPERIOR
 ========================= */
 header {
-    background: #006400;
-    /* Verde IFSul */
+    background: #006400; /* Verde IFSul */
     color: white;
     padding: 15px 40px;
     display: flex;
@@ -70,8 +68,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #FFD700;
-    /* Amarelo ao passar o mouse */
+    color: #FFD700; /* Amarelo ao passar o mouse */
 }
 
 /* Submenu categorias */
@@ -85,6 +82,15 @@ nav ul li ul.submenu {
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav ul li:hover ul.submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 nav ul li ul.submenu li {
@@ -105,11 +111,7 @@ nav ul li ul.submenu li a:hover {
     border-radius: 3px;
 }
 
-nav ul li:hover ul.submenu {
-    display: block;
-}
-
-/* Logos UTU e UTEC com animação ao passar o mouse */
+/* Logos UTU e UTEC com animação */
 .logos-instituicoes {
     display: flex;
     gap: 10px;
@@ -133,11 +135,8 @@ nav ul li:hover ul.submenu {
 #destaque {
     position: relative;
     background-image: url('../images/noticias/noticia1.jpg');
-    /* Imagem de fundo da notícia em destaque */
     background-size: cover;
-    /* Faz a imagem cobrir todo o espaço disponível */
     background-position: center;
-    /* Centraliza a imagem no container */
     height: 400px;
     margin-bottom: 30px;
     display: flex;
@@ -149,39 +148,31 @@ nav ul li:hover ul.submenu {
 
 .destaque-overlay {
     background-color: rgba(0, 0, 0, 0.7);
-    /* Fundo preto semi-transparente */
     color: #fff;
     padding: 25px 35px;
     text-align: center;
     max-width: 850px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    /* Sombra suave ao redor */
 }
 
-/* Título da notícia */
 .destaque-overlay h2 {
     font-size: 30px;
     font-weight: bold;
     color: #FFD700;
-    /* Amarelo IFSul para dar destaque ao título */
     margin-bottom: 10px;
 }
 
-/* Subtítulo ou descrição resumida */
 .destaque-overlay p {
     color: #e0e0e0;
-    /* Cinza claro para boa leitura sobre o fundo escuro */
     font-size: 16px;
     margin-bottom: 15px;
 }
 
-/* Botão "Leia mais" para direcionar para a notícia completa */
 .destaque-overlay .botao-leia-mais {
     display: inline-block;
     padding: 10px 20px;
     background-color: #228B22;
-    /* Verde institucional */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -189,15 +180,12 @@ nav ul li:hover ul.submenu {
     transition: background-color 0.3s;
 }
 
-/* Animação no hover do botão */
 .destaque-overlay .botao-leia-mais:hover {
     background-color: #006400;
-    /* Verde mais escuro no hover */
 }
 
-
 /* =========================
-   LISTAGEM DE NOTÍCIAS (HOME e CATEGORIAS)
+   LISTAGEM DE NOTÍCIAS
 ========================= */
 #noticias,
 .categoria-noticias {
@@ -245,13 +233,13 @@ nav ul li:hover ul.submenu {
 }
 
 /* Zig-zag layout nas notícias */
-#noticias>.noticia-link:nth-of-type(odd) .noticia-horizontal,
-.categoria-noticias>.noticia-link:nth-of-type(odd) .noticia-horizontal {
+#noticias > .noticia-link:nth-of-type(odd) .noticia-horizontal,
+.categoria-noticias > .noticia-link:nth-of-type(odd) .noticia-horizontal {
     flex-direction: row;
 }
 
-#noticias>.noticia-link:nth-of-type(even) .noticia-horizontal,
-.categoria-noticias>.noticia-link:nth-of-type(even) .noticia-horizontal {
+#noticias > .noticia-link:nth-of-type(even) .noticia-horizontal,
+.categoria-noticias > .noticia-link:nth-of-type(even) .noticia-horizontal {
     flex-direction: row-reverse;
 }
 
@@ -281,7 +269,7 @@ nav ul li:hover ul.submenu {
 }
 
 /* =========================
-   DEPOIMENTOS COM PERFIL + TRANSPARÊNCIA
+   DEPOIMENTOS COM FOTO DE PERFIL
 ========================= */
 #depoimentos {
     margin-top: 50px;
@@ -312,11 +300,8 @@ nav ul li:hover ul.submenu {
     font-size: 18px;
     line-height: 1.6;
     background: rgba(0, 100, 0, 0.4);
-    /* Fundo verde com transparência */
     backdrop-filter: blur(8px);
-    /* Efeito de blur atrás (chrome) */
     -webkit-backdrop-filter: blur(8px);
-    /* Efeito de blur Safari */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
 }
@@ -325,7 +310,6 @@ nav ul li:hover ul.submenu {
     display: block;
 }
 
-/* Aspas decorativas */
 .depoimento::before,
 .depoimento::after {
     content: '"';
@@ -345,7 +329,6 @@ nav ul li:hover ul.submenu {
     right: 20px;
 }
 
-/* Foto de perfil dos alunos */
 .foto-perfil {
     width: 80px;
     height: 80px;
@@ -368,7 +351,6 @@ nav ul li:hover ul.submenu {
     color: #FFD700;
 }
 
-/* Indicadores dos depoimentos */
 .indicadores {
     text-align: center;
     margin-top: 15px;
@@ -394,7 +376,7 @@ nav ul li:hover ul.submenu {
 }
 
 /* =========================
-   NOTÍCIA COMPLETA (noticia.html)
+   PÁGINA DE NOTÍCIA COMPLETA
 ========================= */
 .noticia-completa {
     max-width: 900px;
@@ -452,6 +434,134 @@ footer {
     text-align: center;
     background: #333;
     color: white;
-    padding: 10px;
+    padding: 20px;
     margin-top: 30px;
+    font-size: 14px;
+}
+
+footer .redes-sociais {
+    margin-top: 10px;
+}
+
+footer .redes-sociais a {
+    color: #FFD700;
+    margin: 0 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .redes-sociais a:hover {
+    text-decoration: underline;
+}
+
+footer ul.redes-sociais {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+footer ul.redes-sociais li a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul.redes-sociais li a:hover {
+    color: #ffffff;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-esquerda {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .noticia-horizontal {
+        flex-direction: column;
+    }
+
+    .noticia-horizontal img {
+        width: 100%;
+        height: auto;
+    }
+
+    .destaque-overlay {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   FORMULÁRIO - ENVIE UMA NOTÍCIA
+========================= */
+.form-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #006400;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #006400;
+    outline: none;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: #006400;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #228B22;
 }

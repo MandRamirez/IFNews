@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Envie uma Notícia - IFNews</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- =========================
+         HEADER PADRÃO
+    ========================== -->
+    <header>
+        <div class="header-container">
+            <div class="menu-esquerda">
+                <img src="images/ifsul_logo.png" alt="Logo IFSul" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">Categorias
+                            <ul class="submenu">
+                                <li><a href="categoria.html">Esportes</a></li>
+                                <li><a href="categoria.html">Eventos</a></li>
+                                <li><a href="categoria.html">Institucional</a></li>
+                                <li><a href="categoria.html">Premiações</a></li>
+                                <li><a href="envie.html">Envie uma notícia</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="logos-instituicoes">
+                <a href="https://www.utu.edu.uy/" target="_blank">
+                    <img src="images/utu_logo.png" class="logo-instituicao" alt="UTU">
+                </a>
+                <a href="https://utec.edu.uy/" target="_blank">
+                    <img src="images/utec_logo.png" class="logo-instituicao" alt="UTEC">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================
+         FORMULÁRIO DE ENVIO
+    ========================== -->
+    <section class="form-container">
+        <h2>Envie uma Notícia</h2>
+        <form method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="titulo">Título da Notícia:</label>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <label for="texto">Texto da Notícia:</label>
+            <textarea id="texto" name="texto" rows="6" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- =========================
+         FOOTER PADRÃO
+    ========================== -->
+    <footer>
+        <p>&copy; 2025 IFNews - Todos os direitos reservados.</p>
+        <div class="redes-sociais">
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Contato</a>
+        </div>
+    </footer>
+</body>
+
+</html>

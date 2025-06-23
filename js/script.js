@@ -44,3 +44,28 @@ function trocarImagem(elemento) {
     const imagemPrincipal = document.getElementById('imagem-principal');
     imagemPrincipal.src = elemento.src;
 }
+
+// ===========================
+// Carrossel automático de imagens na notícia completa
+// ===========================
+
+let miniaturas = document.querySelectorAll(".miniaturas img");
+let imagemPrincipal = document.getElementById("imagem-principal");
+let indexAtual = 0;
+
+// Função para trocar a imagem
+function avancarImagem() {
+    indexAtual = (indexAtual + 1) % miniaturas.length;
+    imagemPrincipal.src = miniaturas[indexAtual].src;
+}
+
+// Timer: troca a cada 5 segundos
+setInterval(avancarImagem, 5000);
+
+// Permite clique manual nas miniaturas
+miniaturas.forEach((img, index) => {
+    img.addEventListener("click", () => {
+        imagemPrincipal.src = img.src;
+        indexAtual = index;  // Atualiza o índice para o próximo loop continuar do certo
+    });
+});
