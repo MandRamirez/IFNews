@@ -3,13 +3,13 @@ body {
     margin: 0;
     padding: 0;
     background: #f0f0f0;
-    padding-top: 120px; /* Compensa o header fixo */
+    padding-top: 120px;
 }
 
 header {
     background: #006400;
     color: white;
-    padding: 15px 40px;  /* Mais espaço nas laterais */
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,7 +22,6 @@ header {
     box-sizing: border-box;
 }
 
-/* Opcional: limitar largura máxima do conteúdo em telas muito grandes */
 .header-container {
     max-width: 1200px;
     width: 100%;
@@ -32,8 +31,6 @@ header {
     align-items: center;
 }
 
-
-/* Parte esquerda: Logo + Menu */
 .menu-esquerda {
     display: flex;
     align-items: center;
@@ -45,7 +42,6 @@ header {
     width: auto;
 }
 
-/* Navegação principal */
 nav ul {
     list-style: none;
     display: flex;
@@ -69,7 +65,6 @@ nav ul li a:hover {
     color: #FFD700;
 }
 
-/* Submenu */
 nav ul li ul.submenu {
     display: none;
     position: absolute;
@@ -78,7 +73,7 @@ nav ul li ul.submenu {
     background-color: #228B22;
     padding: 0;
     border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
 
@@ -90,7 +85,6 @@ nav ul li ul.submenu li {
 
 nav ul li ul.submenu li a {
     color: white;
-    font-weight: normal;
     display: block;
     text-decoration: none;
 }
@@ -105,7 +99,6 @@ nav ul li:hover ul.submenu {
     display: block;
 }
 
-/* Parte direita: Logos UTU e UTEC */
 .logos-instituicoes {
     display: flex;
     gap: 10px;
@@ -123,89 +116,261 @@ nav ul li:hover ul.submenu {
     transform: scale(1.2) rotate(5deg);
 }
 
-/* Destaque da primeira notícia */
+/* Notícia em Destaque */
 #destaque {
-    background-color: #d0f0d0;
-    padding: 20px;
-    margin: 20px auto;
-    border: 2px solid #228B22;
-    max-width: 800px;
-    text-align: center;
+    position: relative;
+    background-image: url('../images/noticias/noticia1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.imagem-destaque {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
+.destaque-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFD700;
+    padding: 20px 30px;
+    text-align: center;
+    max-width: 800px;
+    border-radius: 5px;
+}
+
+.destaque-overlay h2 {
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
-/* Notícias secundárias */
-#noticias .noticia {
+.destaque-overlay p {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Container de Notícias (Home e Categorias) */
+#noticias,
+.categoria-noticias {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.noticia-horizontal {
     display: flex;
     align-items: center;
     background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px auto;
-    max-width: 800px;
-    border-radius: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
-#noticias .noticia img {
-    width: 120px;
-    height: 80px;
+.noticia-horizontal:hover {
+    transform: scale(1.01);
+}
+
+.noticia-horizontal img {
+    width: 250px;
+    height: 150px;
     object-fit: cover;
-    margin-right: 15px;
-    border-radius: 5px;
+    flex-shrink: 0;
 }
 
-/* Depoimentos com indicadores */
+.noticia-horizontal div {
+    padding: 15px;
+    flex: 1;
+}
+
+.noticia-horizontal h3 {
+    color: #006400;
+    margin: 0 0 8px;
+}
+
+.noticia-horizontal p {
+    color: #333;
+    margin: 0;
+}
+
+#noticias>.noticia-link:nth-of-type(odd) .noticia-horizontal,
+.categoria-noticias>.noticia-link:nth-of-type(odd) .noticia-horizontal {
+    flex-direction: row;
+}
+
+#noticias>.noticia-link:nth-of-type(even) .noticia-horizontal,
+.categoria-noticias>.noticia-link:nth-of-type(even) .noticia-horizontal {
+    flex-direction: row-reverse;
+}
+
+
+.noticia-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+/* Contador de Processo Seletivo */
+#contador {
+    text-align: center;
+    margin: 40px auto;
+    padding: 15px;
+    background-color: #eaf7ea;
+    border: 2px solid #228B22;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.contador-texto {
+    font-size: 18px;
+    color: #006400;
+    font-weight: bold;
+}
+
+/* Depoimentos */
+#depoimentos {
+    margin-top: 50px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+#depoimentos h2 {
+    color: #006400;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
 .depoimentos-container {
     position: relative;
     overflow: hidden;
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
 .depoimento {
     display: none;
-    padding: 15px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 30px 20px;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    background: rgba(0, 100, 0, 0.4); /* Verde IFSul com transparência */
+    backdrop-filter: blur(8px);        /* Efeito de desfoque atrás */
+    -webkit-backdrop-filter: blur(8px); /* Suporte Safari */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
 }
 
 .depoimento.ativo {
     display: block;
 }
 
+/* Aspas decorativas */
+.depoimento::before,
+.depoimento::after {
+    content: '"';
+    color: #FFD700;
+    font-size: 40px;
+    position: absolute;
+    font-family: Arial, sans-serif;
+}
+
+.depoimento::before {
+    top: 10px;
+    left: 20px;
+}
+
+.depoimento::after {
+    bottom: 10px;
+    right: 20px;
+}
+
 .autor {
-    margin-top: 10px;
+    margin-top: 15px;
     font-style: italic;
-    color: #333;
+    font-weight: bold;
+    color: #FFD700;
 }
 
 .indicadores {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .indicador {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background: gray;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.indicador:hover {
+    transform: scale(1.2);
 }
 
 .indicador.ativo {
-    background: #006400;
+    background: #FFD700;
+}
+
+
+/* Página noticia.html - Notícia completa */
+.noticia-completa {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noticia-completa h2 {
+    color: #006400;
+    margin-bottom: 20px;
+}
+
+.galeria-noticia {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#imagem-principal {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.miniaturas img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.miniaturas img:hover {
+    transform: scale(1.05);
+    border-color: #006400;
+}
+
+.texto-noticia p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #333;
 }
 
 footer {
@@ -213,5 +378,5 @@ footer {
     background: #333;
     color: white;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
 }

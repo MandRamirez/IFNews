@@ -1,44 +1,64 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>IFNews - Categoria</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/ifsul_logo.png" alt="Logo IFSul" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">Categorias
-                    <ul class="submenu">
-                        <li><a href="categoria.html">Esportes</a></li>
-                        <li><a href="categoria.html">Eventos</a></li>
-                        <li><a href="categoria.html">Institucional</a></li>
-                        <li><a href="categoria.html">Premiações</a></li>
-                        <li><a href="#">Envie uma notícia</a></li>
+        <div class="header-container">
+            <div class="menu-esquerda">
+                <img src="images/ifsul_logo.png" alt="Logo IFSul" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">Categorias
+                            <ul class="submenu">
+                                <li><a href="categoria.html">Esportes</a></li>
+                                <li><a href="categoria.html">Eventos</a></li>
+                                <li><a href="categoria.html">Institucional</a></li>
+                                <li><a href="categoria.html">Premiações</a></li>
+                                <li><a href="#">Envie uma notícia</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-            </ul>
-        </nav>
+                </nav>
+            </div>
+
+            <div class="logos-instituicoes">
+                <a href="https://www.utu.edu.uy/" target="_blank">
+                    <img src="images/utu_logo.png" class="logo-instituicao" alt="UTU" />
+                </a>
+                <a href="https://utec.edu.uy/" target="_blank">
+                    <img src="images/utec_logo.png" class="logo-instituicao" alt="UTEC" />
+                </a>
+            </div>
+        </div>
     </header>
 
     <main>
-        <h2>Categoria: Eventos</h2>
-        <ul>
-            <li><a href="noticia.html">Abertura da Semana Acadêmica...</a></li>
-            <li><a href="noticia.html">Workshop de Tecnologia...</a></li>
-            <li><a href="noticia.html">Palestra sobre Carreiras...</a></li>
-            <li><a href="noticia.html">Evento de Inclusão Social...</a></li>
-            <li><a href="noticia.html">Feira de Ciências do IFSul...</a></li>
-            <li><a href="noticia.html">Mostra de Projetos de Extensão...</a></li>
-            <li><a href="noticia.html">Aulão Preparatório para o Vestibular...</a></li>
-            <li><a href="noticia.html">Encerramento com apresentações culturais...</a></li>
-        </ul>
+        <section class="categoria-noticias">
+            <h2>Categoria: Esportes</h2>
+
+            <a class="noticia-horizontal" href="noticia.html">
+                <img src="images/noticias/noticia3.jpg" alt="Notícia Esportiva">
+                <div>
+                    <h3>Medalhas nos Jogos Estudantis</h3>
+                    <p>Atletas do campus conquistaram pódios nas categorias de atletismo e futsal.</p>
+                </div>
+            </a>
+
+            <a class="noticia-horizontal" href="noticia.html">
+                <img src="images/noticias/noticia6.jpg" alt="Evento esportivo">
+                <div>
+                    <h3>Festival Intercampi movimenta comunidade</h3>
+                    <p>Centenas de alunos participaram das competições intercampi de esportes e cultura.</p>
+                </div>
+            </a>
+        </section>
     </main>
 
     <footer>

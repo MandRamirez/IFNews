@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,41 +8,64 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
+
 <body>
     <header>
-        <img src="images/ifsul_logo.png" alt="Logo IFSul" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">Categorias
-                    <ul class="submenu">
-                        <li><a href="categoria.html">Esportes</a></li>
-                        <li><a href="categoria.html">Eventos</a></li>
-                        <li><a href="categoria.html">Institucional</a></li>
-                        <li><a href="categoria.html">Premiações</a></li>
-                        <li><a href="#">Envie uma notícia</a></li>
+        <div class="header-container">
+            <div class="menu-esquerda">
+                <img src="images/ifsul_logo.png" alt="Logo IFSul" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">Categorias
+                            <ul class="submenu">
+                                <li><a href="categoria.html">Esportes</a></li>
+                                <li><a href="categoria.html">Eventos</a></li>
+                                <li><a href="categoria.html">Institucional</a></li>
+                                <li><a href="categoria.html">Premiações</a></li>
+                                <li><a href="#">Envie uma notícia</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-            </ul>
-        </nav>
+                </nav>
+            </div>
+
+            <div class="logos-instituicoes">
+                <a href="https://www.utu.edu.uy/" target="_blank">
+                    <img src="images/utu_logo.png" class="logo-instituicao" alt="UTU">
+                </a>
+                <a href="https://utec.edu.uy/" target="_blank">
+                    <img src="images/utec_logo.png" class="logo-instituicao" alt="UTEC">
+                </a>
+            </div>
+        </div>
     </header>
 
     <main>
-        <h2>Grande Evento no IFSul movimenta a comunidade</h2>
-        <p>O Instituto Federal promoveu um grande evento reunindo alunos, professores e a comunidade...</p>
+        <section class="noticia-completa">
+            <h2>IFSul realiza Semana Acadêmica com foco em Inovação</h2>
 
-        <div id="galeria">
-            <img id="imagemGrande" src="images/noticias/foto1.jpg" alt="Imagem Grande" width="400">
-            <div id="miniaturas">
-                <img src="images/noticias/foto1.jpg" onclick="trocarImagem(this.src)" width="100">
-                <img src="images/noticias/foto2.jpg" onclick="trocarImagem(this.src)" width="100">
-                <img src="images/noticias/foto3.jpg" onclick="trocarImagem(this.src)" width="100">
+            <div class="galeria-noticia">
+                <img id="imagem-principal" src="images/noticias/noticia1_1.jpg" alt="Imagem Principal">
+
+                <div class="miniaturas">
+                    <img src="images/noticias/noticia1_1.jpg" alt="Miniatura 1" onclick="trocarImagem(this)">
+                    <img src="images/noticias/noticia1_2.jpg" alt="Miniatura 2" onclick="trocarImagem(this)">
+                    <img src="images/noticias/noticia1_3.jpg" alt="Miniatura 3" onclick="trocarImagem(this)">
+                </div>
             </div>
-        </div>
+
+            <div class="texto-noticia">
+                <p>Durante a Semana Acadêmica do IFSul, alunos participaram de diversas palestras, workshops e atividades voltadas para o desenvolvimento de projetos de inovação e tecnologia.</p>
+                <p>O evento contou com a presença de professores, especialistas convidados e representantes de empresas parceiras.</p>
+                <p>Os estudantes puderam apresentar seus trabalhos desenvolvidos durante o semestre e participaram de oficinas práticas sobre robótica, desenvolvimento web, e muito mais.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 IFNews - Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>

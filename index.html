@@ -45,37 +45,73 @@
 
 
     <section id="destaque">
-        <h2>Notícia em Destaque</h2>
-        <img src="images/noticias/noticia1.jpg" alt="Imagem Notícia Destaque" class="imagem-destaque">
-        <p>Grande evento no IFSul movimenta a comunidade acadêmica com atividades culturais e científicas.</p>
+        <div class="destaque-overlay">
+            <h2>Título da Notícia em Destaque</h2>
+            <p>Grande evento no IFSul movimenta a comunidade acadêmica com atividades culturais e científicas.</p>
+        </div>
     </section>
+
 
     <section id="noticias">
         <h2>Últimas Notícias</h2>
-        <div class="noticia">
-            <img src="images/noticias/noticia2.jpg" alt="Notícia 2">
-            <p>IFSul realiza Semana Acadêmica com diversas palestras...</p>
-        </div>
-        <div class="noticia">
-            <img src="images/noticias/noticia3.jpg" alt="Notícia 3">
-            <p>Atletas conquistam medalhas nos Jogos Estudantis...</p>
-        </div>
-        <div class="noticia">
-            <img src="images/noticias/noticia4.jpg" alt="Notícia 4">
-            <p>Novos cursos técnicos serão ofertados em 2025...</p>
-        </div>
-        <div class="noticia">
-            <img src="images/noticias/noticia5.jpg" alt="Notícia 5">
-            <p>Alunos do curso de informática recebem premiação estadual...</p>
-        </div>
-        <div class="noticia">
-            <img src="images/noticias/noticia6.jpg" alt="Notícia 6">
-            <p>Evento de Extensão tem recorde de inscrições este ano...</p>
-        </div>
+
+        <a href="noticia.html" class="noticia-link">
+            <div class="noticia-horizontal">
+                <img src="images/noticias/noticia2.jpg" alt="Notícia 2">
+                <div>
+                    <h3>Semana Acadêmica com diversas palestras</h3>
+                    <p>IFSul realiza uma série de palestras com professores convidados e especialistas da área.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="noticia.html" class="noticia-link">
+            <div class="noticia-horizontal">
+                <img src="images/noticias/noticia3.jpg" alt="Notícia 3">
+                <div>
+                    <h3>Medalhas nos Jogos Estudantis</h3>
+                    <p>Atletas do campus conquistaram pódios nas categorias de atletismo e futsal.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="noticia.html" class="noticia-link">
+            <div class="noticia-horizontal">
+                <img src="images/noticias/noticia4.jpg" alt="Notícia 4">
+                <div>
+                    <h3>Novos Cursos Técnicos em 2025</h3>
+                    <p>IFSul anuncia a abertura de novas turmas nas áreas de Tecnologia da Informação e Engenharia.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="noticia.html" class="noticia-link">
+            <div class="noticia-horizontal">
+                <img src="images/noticias/noticia5.jpg" alt="Notícia 5">
+                <div>
+                    <h3>Premiação Estadual para alunos de informática</h3>
+                    <p>Estudantes receberam reconhecimento por projetos de software desenvolvidos em sala de aula.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="noticia.html" class="noticia-link">
+            <div class="noticia-horizontal">
+                <img src="images/noticias/noticia6.jpg" alt="Notícia 6">
+                <div>
+                    <h3>Evento de Extensão com recorde de inscrições</h3>
+                    <p>Mais de 500 estudantes participaram das atividades de extensão deste semestre.</p>
+                </div>
+            </div>
+        </a>
     </section>
 
+
+
     <section id="contador">
-        <!-- Contador JS vai preencher aqui -->
+        <p class="contador-texto">
+            Faltam <span id="dias-restantes"></span> dias para o próximo <strong>Processo Seletivo do IFSul!</strong>
+        </p>
     </section>
 
     <section id="depoimentos">
