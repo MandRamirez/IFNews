@@ -1,13 +1,21 @@
+/* =========================
+   ESTILO GLOBAL
+========================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: #f0f0f0;
     padding-top: 120px;
+    /* Compensa o header fixo */
 }
 
+/* =========================
+   HEADER / MENU SUPERIOR
+========================= */
 header {
     background: #006400;
+    /* Verde IFSul */
     color: white;
     padding: 15px 40px;
     display: flex;
@@ -63,8 +71,10 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #FFD700;
+    /* Amarelo ao passar o mouse */
 }
 
+/* Submenu categorias */
 nav ul li ul.submenu {
     display: none;
     position: absolute;
@@ -99,6 +109,7 @@ nav ul li:hover ul.submenu {
     display: block;
 }
 
+/* Logos UTU e UTEC com animação ao passar o mouse */
 .logos-instituicoes {
     display: flex;
     gap: 10px;
@@ -116,12 +127,17 @@ nav ul li:hover ul.submenu {
     transform: scale(1.2) rotate(5deg);
 }
 
-/* Notícia em Destaque */
+/* =========================
+   NOTÍCIA EM DESTAQUE
+========================= */
 #destaque {
     position: relative;
     background-image: url('../images/noticias/noticia1.jpg');
+    /* Imagem de fundo da notícia em destaque */
     background-size: cover;
+    /* Faz a imagem cobrir todo o espaço disponível */
     background-position: center;
+    /* Centraliza a imagem no container */
     height: 400px;
     margin-bottom: 30px;
     display: flex;
@@ -132,25 +148,57 @@ nav ul li:hover ul.submenu {
 }
 
 .destaque-overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #FFD700;
-    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fundo preto semi-transparente */
+    color: #fff;
+    padding: 25px 35px;
     text-align: center;
-    max-width: 800px;
-    border-radius: 5px;
+    max-width: 850px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* Sombra suave ao redor */
 }
 
+/* Título da notícia */
 .destaque-overlay h2 {
-    font-size: 28px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFD700;
+    /* Amarelo IFSul para dar destaque ao título */
     margin-bottom: 10px;
 }
 
+/* Subtítulo ou descrição resumida */
 .destaque-overlay p {
-    color: #fff;
+    color: #e0e0e0;
+    /* Cinza claro para boa leitura sobre o fundo escuro */
     font-size: 16px;
+    margin-bottom: 15px;
 }
 
-/* Container de Notícias (Home e Categorias) */
+/* Botão "Leia mais" para direcionar para a notícia completa */
+.destaque-overlay .botao-leia-mais {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #228B22;
+    /* Verde institucional */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Animação no hover do botão */
+.destaque-overlay .botao-leia-mais:hover {
+    background-color: #006400;
+    /* Verde mais escuro no hover */
+}
+
+
+/* =========================
+   LISTAGEM DE NOTÍCIAS (HOME e CATEGORIAS)
+========================= */
 #noticias,
 .categoria-noticias {
     max-width: 1000px;
@@ -196,6 +244,7 @@ nav ul li:hover ul.submenu {
     margin: 0;
 }
 
+/* Zig-zag layout nas notícias */
 #noticias>.noticia-link:nth-of-type(odd) .noticia-horizontal,
 .categoria-noticias>.noticia-link:nth-of-type(odd) .noticia-horizontal {
     flex-direction: row;
@@ -206,15 +255,15 @@ nav ul li:hover ul.submenu {
     flex-direction: row-reverse;
 }
 
-
 .noticia-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-
-/* Contador de Processo Seletivo */
+/* =========================
+   CONTADOR DE PROCESSO SELETIVO
+========================= */
 #contador {
     text-align: center;
     margin: 40px auto;
@@ -231,7 +280,9 @@ nav ul li:hover ul.submenu {
     font-weight: bold;
 }
 
-/* Depoimentos */
+/* =========================
+   DEPOIMENTOS COM PERFIL + TRANSPARÊNCIA
+========================= */
 #depoimentos {
     margin-top: 50px;
     padding: 20px 10px;
@@ -260,10 +311,13 @@ nav ul li:hover ul.submenu {
     color: white;
     font-size: 18px;
     line-height: 1.6;
-    background: rgba(0, 100, 0, 0.4); /* Verde IFSul com transparência */
-    backdrop-filter: blur(8px);        /* Efeito de desfoque atrás */
-    -webkit-backdrop-filter: blur(8px); /* Suporte Safari */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background: rgba(0, 100, 0, 0.4);
+    /* Fundo verde com transparência */
+    backdrop-filter: blur(8px);
+    /* Efeito de blur atrás (chrome) */
+    -webkit-backdrop-filter: blur(8px);
+    /* Efeito de blur Safari */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -291,13 +345,30 @@ nav ul li:hover ul.submenu {
     right: 20px;
 }
 
+/* Foto de perfil dos alunos */
+.foto-perfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.depoimento .texto {
+    font-style: italic;
+    margin: 10px 0;
+}
+
 .autor {
-    margin-top: 15px;
+    margin-top: 10px;
     font-style: italic;
     font-weight: bold;
     color: #FFD700;
 }
 
+/* Indicadores dos depoimentos */
 .indicadores {
     text-align: center;
     margin-top: 15px;
@@ -322,8 +393,9 @@ nav ul li:hover ul.submenu {
     background: #FFD700;
 }
 
-
-/* Página noticia.html - Notícia completa */
+/* =========================
+   NOTÍCIA COMPLETA (noticia.html)
+========================= */
 .noticia-completa {
     max-width: 900px;
     margin: 40px auto;
@@ -373,6 +445,9 @@ nav ul li:hover ul.submenu {
     color: #333;
 }
 
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     background: #333;
