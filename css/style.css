@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+    padding-top: 120px; /* Compensa o header fixo */
+}
+
+header {
+    background: #006400;
+    color: white;
+    padding: 15px 40px;  /* Mais espaço nas laterais */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    min-height: 80px;
+    box-sizing: border-box;
+}
+
+/* Opcional: limitar largura máxima do conteúdo em telas muito grandes */
+.header-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Parte esquerda: Logo + Menu */
+.menu-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    max-height: 60px;
+    width: auto;
+}
+
+/* Navegação principal */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    padding: 5px 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Submenu */
+nav ul li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #228B22;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+nav ul li ul.submenu li {
+    margin: 0;
+    padding: 10px 15px;
+    width: 150px;
+}
+
+nav ul li ul.submenu li a {
+    color: white;
+    font-weight: normal;
+    display: block;
+    text-decoration: none;
+}
+
+nav ul li ul.submenu li a:hover {
+    background-color: #006400;
+    color: #FFD700;
+    border-radius: 3px;
+}
+
+nav ul li:hover ul.submenu {
+    display: block;
+}
+
+/* Parte direita: Logos UTU e UTEC */
+.logos-instituicoes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo-instituicao {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.logo-instituicao:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Destaque da primeira notícia */
+#destaque {
+    background-color: #d0f0d0;
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px solid #228B22;
+    max-width: 800px;
+    text-align: center;
+}
+
+.imagem-destaque {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Notícias secundárias */
+#noticias .noticia {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 800px;
+    border-radius: 5px;
+}
+
+#noticias .noticia img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+/* Depoimentos com indicadores */
+.depoimentos-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.depoimento {
+    display: none;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.depoimento.ativo {
+    display: block;
+}
+
+.autor {
+    margin-top: 10px;
+    font-style: italic;
+    color: #333;
+}
+
+.indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicador {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicador.ativo {
+    background: #006400;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
